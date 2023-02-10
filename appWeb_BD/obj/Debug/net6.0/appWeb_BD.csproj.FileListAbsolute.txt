@@ -80,3 +80,11 @@ C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6
 C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6.0\appWeb_BD.pdb
 C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6.0\appWeb_BD.genruntimeconfig.cache
 C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6.0\ref\appWeb_BD.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6.0\scopedcss\Views\Login\Login.cshtml.rz.scp.css
+C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD\obj\Debug\net6.0\scopedcss\Views\Register\Register.cshtml.rz.scp.css

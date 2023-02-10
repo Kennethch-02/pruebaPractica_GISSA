@@ -1,0 +1,49 @@
+.screenLogin[b-ur7mtvs2kc] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap:50px;
+}
+.screenLogin button[b-ur7mtvs2kc] {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    
+}
+.containerLogin[b-ur7mtvs2kc] {
+    background-color: silver;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.spaceLogin[b-ur7mtvs2kc]{
+
+}
+.spaceLogin h1[b-ur7mtvs2kc] {
+    font-family:'Modern No. 20';
+    color:darkgray;
+
+}
+.spaceLogin input[b-ur7mtvs2kc] {
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+.spaceLogin p[b-ur7mtvs2kc] {
+    font-size: 18px;
+    color:red;
+}
+.textInfo[b-ur7mtvs2kc]{
+
+}

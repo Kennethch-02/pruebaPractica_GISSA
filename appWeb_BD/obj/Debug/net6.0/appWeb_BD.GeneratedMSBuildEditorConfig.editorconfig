@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\kenne\OneDrive\Escritorio\pruebaPractica_GISSA\appWeb_BD
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/Home/Bienvenido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCaWVudmVuaWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ur7mtvs2kc
+
+[C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/Register/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7eeqsgs23c
 
 [C:/Users/kenne/OneDrive/Escritorio/pruebaPractica_GISSA/appWeb_BD/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

@@ -1,0 +1,12 @@
+.modalCustom[b-7eeqsgs23c] {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: max-content;
+    align-items: center;
+}
+.alertTop[b-7eeqsgs23c] {
+    z-index: 12;
+    position: fixed;
+    top: 0;
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Msd44ybMfd88Bv6vB9u+eRXIcaK2u7kZliCKOsRXC2k=",
+  "Hash": "RZzBeu2hv+Ycaac8oC7Q1dGON9QBsVhLOmEynSdTo9I=",
   "Source": "appWeb_BD",
   "BasePath": "_content/appWeb_BD",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\appWeb_BD.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\Views\\Login\\Login.cshtml.js",
+      "SourceId": "appWeb_BD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\",
+      "BasePath": "_content/appWeb_BD",
+      "RelativePath": "Views/Login/Login.cshtml.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Views\\Login\\Login.cshtml.js"
+    },
+    {
+      "Identity": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\Views\\Register\\Register.cshtml.js",
+      "SourceId": "appWeb_BD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\",
+      "BasePath": "_content/appWeb_BD",
+      "RelativePath": "Views/Register/Register.cshtml.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Views\\Register\\Register.cshtml.js"
     },
     {
       "Identity": "C:\\Users\\kenne\\OneDrive\\Escritorio\\pruebaPractica_GISSA\\appWeb_BD\\wwwroot\\css\\site.css",

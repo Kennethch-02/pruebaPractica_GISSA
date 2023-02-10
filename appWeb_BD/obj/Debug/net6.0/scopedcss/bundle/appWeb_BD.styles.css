@@ -1,3 +1,66 @@
+/* _content/appWeb_BD/Views/Login/Login.cshtml.rz.scp.css */
+.screenLogin[b-ur7mtvs2kc] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap:50px;
+}
+.screenLogin button[b-ur7mtvs2kc] {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    
+}
+.containerLogin[b-ur7mtvs2kc] {
+    background-color: silver;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.spaceLogin[b-ur7mtvs2kc]{
+
+}
+.spaceLogin h1[b-ur7mtvs2kc] {
+    font-family:'Modern No. 20';
+    color:darkgray;
+
+}
+.spaceLogin input[b-ur7mtvs2kc] {
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+.spaceLogin p[b-ur7mtvs2kc] {
+    font-size: 18px;
+    color:red;
+}
+.textInfo[b-ur7mtvs2kc]{
+
+}
+/* _content/appWeb_BD/Views/Register/Register.cshtml.rz.scp.css */
+.modalCustom[b-7eeqsgs23c] {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: max-content;
+    align-items: center;
+}
+.alertTop[b-7eeqsgs23c] {
+    z-index: 12;
+    position: fixed;
+    top: 0;
+}
 /* _content/appWeb_BD/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
