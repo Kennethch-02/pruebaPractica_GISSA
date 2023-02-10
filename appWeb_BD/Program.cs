@@ -1,7 +1,15 @@
+using Microsoft.AspNetCore.Connections;
+using Microsoft.EntityFrameworkCore;
+using appWeb_BD.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Inyeccion del string de conexion
+builder.Services.AddDbContext<AppWebBdContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("connectionContext"));
+});
 
 var app = builder.Build();
 
