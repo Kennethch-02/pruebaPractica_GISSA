@@ -114,7 +114,7 @@ END
 GO
 
 -- Procedimiento para verificar el Inicio de sesion
-ALTER PROCEDURE test_verificarInicioSesion (
+CREATE PROCEDURE test_verificarInicioSesion (
 	@correo varchar(100),
 	@clave varchar(500), 
 	@resultado bit OUTPUT, 
@@ -124,12 +124,9 @@ BEGIN
     SET NOCOUNT ON;
 
     DECLARE @id INT;
-    DECLARE @clave_encriptada varchar(500);
-
-    SET @clave_encriptada = HASHBYTES('SHA2_512', @clave);
 
     SELECT @id = id FROM test_usuarios 
-    WHERE correo_electronico = @correo AND clave = @clave_encriptada;
+    WHERE correo_electronico = @correo AND clave = @clave;
 
     IF (@id IS NULL)
         SET @resultado = 0;
