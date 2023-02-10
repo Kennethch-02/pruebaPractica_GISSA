@@ -125,3 +125,12 @@ BEGIN
     FROM test_TipoUsuario
 END
 GO
+
+CREATE PROCEDURE test_IniciarSesion (@CorreoElectronico varchar(100), @Clave nvarchar(50))
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT *
+    FROM test_Usuarios
+    WHERE correoElectronico = @CorreoElectronico AND Clave = @Clave
+END
