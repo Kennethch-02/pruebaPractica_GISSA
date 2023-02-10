@@ -1,0 +1,44 @@
+﻿@model LoginUserModel
+@{
+    ViewBag.Title = "Inicio de Sesion";
+    Layout = null;
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - appWeb_BD</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/appWeb_BD.styles.css" asp-append-version="true" />
+</head>
+
+<form method="post">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left"></div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
+                            <input asp-for="CorreoElectronico" class="form-control" placeholder="Correo Electronico" type="email" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="Clave" class="text-danger"></span>
+                            <input asp-for="Clave" class="form-control" placeholder="Password" type="Password" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" value="Ingresar" class="btn btn-primary" asp-action="Login" asp-controller="Login" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

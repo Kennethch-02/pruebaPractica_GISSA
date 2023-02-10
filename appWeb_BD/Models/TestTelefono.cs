@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace appWeb_BD.Models;
 
-public partial class TestHabilidadesBlanda
+public partial class TestTelefono
 {
     public int Id { get; set; }
 
-    public string Habilidad { get; set; } = null!;
+    public string Telefono { get; set; } = null!;
 
     public int UsuarioId { get; set; }
 

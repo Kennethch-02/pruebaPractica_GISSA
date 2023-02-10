@@ -1,0 +1,49 @@
+﻿.screenLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap:50px;
+}
+.screenLogin button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    
+}
+.containerLogin {
+    background-color: silver;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.spaceLogin{
+
+}
+.spaceLogin h1 {
+    font-family:'Modern No. 20';
+    color:darkgray;
+
+}
+.spaceLogin input {
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+.spaceLogin p {
+    font-size: 18px;
+    color:red;
+}
+.textInfo{
+
+}

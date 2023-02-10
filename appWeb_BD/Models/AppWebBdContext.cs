@@ -17,96 +17,102 @@ public partial class AppWebBdContext : DbContext
 
     public virtual DbSet<TestHabilidadesBlanda> TestHabilidadesBlandas { get; set; }
 
-    public virtual DbSet<TestTipoIdentificacion> TestTipoIdentificacions { get; set; }
-
-    public virtual DbSet<TestTipoUsuario> TestTipoUsuarios { get; set; }
+    public virtual DbSet<TestTelefono> TestTelefonos { get; set; }
 
     public virtual DbSet<TestUsuario> TestUsuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=workBeanch;Database=appWeb_BD;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True");
+    {
+        //=> optionsBuilder.UseSqlServer("Server=workBeanch;Database=appWeb_BD;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True");
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<TestHabilidadesBlanda>(entity =>
         {
-            entity.HasKey(e => e.HabilidadBlandaId).HasName("PK__test_Hab__57E1ABDA569090C6");
+            entity.HasKey(e => e.Id).HasName("PK__test_hab__3213E83F47ACF1FD");
 
-            entity.ToTable("test_HabilidadesBlandas");
+            entity.ToTable("test_habilidades_blandas");
 
-            entity.Property(e => e.HabilidadBlandaId).HasColumnName("HabilidadBlandaID");
-            entity.Property(e => e.NombreHabilidadBlanda)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Habilidad)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("habilidad");
+            entity.Property(e => e.UsuarioId).HasColumnName("usuario_id");
+
+            entity.HasOne(d => d.Usuario).WithMany(p => p.TestHabilidadesBlanda)
+                .HasForeignKey(d => d.UsuarioId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__test_habi__usuar__2B3F6F97");
         });
 
-        modelBuilder.Entity<TestTipoIdentificacion>(entity =>
+        modelBuilder.Entity<TestTelefono>(entity =>
         {
-            entity.HasKey(e => e.TipoIdentificacionId).HasName("PK__test_Tip__C774CA5400A91521");
+            entity.HasKey(e => e.Id).HasName("PK__test_tel__3213E83F0CFE1336");
 
-            entity.ToTable("test_TipoIdentificacion");
+            entity.ToTable("test_telefonos");
 
-            entity.Property(e => e.TipoIdentificacionId).HasColumnName("TipoIdentificacionID");
-            entity.Property(e => e.NombreTipoIdentificacion)
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Telefono)
                 .HasMaxLength(50)
-                .IsUnicode(false);
-        });
+                .IsUnicode(false)
+                .HasColumnName("telefono");
+            entity.Property(e => e.UsuarioId).HasColumnName("usuario_id");
 
-        modelBuilder.Entity<TestTipoUsuario>(entity =>
-        {
-            entity.HasKey(e => e.TipoUsuarioId).HasName("PK__test_Tip__7F22C70213F1394A");
-
-            entity.ToTable("test_TipoUsuario");
-
-            entity.Property(e => e.TipoUsuarioId).HasColumnName("TipoUsuarioID");
-            entity.Property(e => e.NombreTipoUsuario)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+            entity.HasOne(d => d.Usuario).WithMany(p => p.TestTelefonos)
+                .HasForeignKey(d => d.UsuarioId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__test_tele__usuar__286302EC");
         });
 
         modelBuilder.Entity<TestUsuario>(entity =>
         {
-            entity.HasKey(e => e.UsuarioId).HasName("PK__test_Usu__2B3DE79855C5B5B8");
+            entity.HasKey(e => e.Id).HasName("PK__test_usu__3213E83F1C53BF42");
 
-            entity.ToTable("test_Usuarios");
+            entity.ToTable("test_usuarios");
 
-            entity.Property(e => e.UsuarioId).HasColumnName("UsuarioID");
+            entity.HasIndex(e => e.CorreoElectronico, "UQ__test_usu__5B8A068254EA09CD").IsUnique();
+
+            entity.HasIndex(e => e.NombreUsuario, "UQ__test_usu__D4D22D743D1FDA1E").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Clave)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("clave");
             entity.Property(e => e.CorreoElectronico)
-                .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.HabilidadBlandaId).HasColumnName("HabilidadBlandaID");
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("correo_electronico");
             entity.Property(e => e.NombreCompleto)
-                .HasMaxLength(100)
-                .IsUnicode(false);
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("nombre_completo");
             entity.Property(e => e.NombreUsuario)
                 .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.NumeroIdentificacion)
+                .IsUnicode(false)
+                .HasColumnName("nombre_usuario");
+            entity.Property(e => e.NumIdentificacion)
                 .HasMaxLength(50)
-                .IsUnicode(false);
+                .IsUnicode(false)
+                .HasColumnName("num_identificacion");
+            entity.Property(e => e.TipoIdentificacion)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("tipo_identificacion");
+            entity.Property(e => e.TipoUsuario)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("tipo_usuario");
+            entity.Property(e => e.HabilidadBlanda)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("HabilidadBlanda");
             entity.Property(e => e.Telefono)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.TipoIdentificacionId).HasColumnName("TipoIdentificacionID");
-            entity.Property(e => e.TipoUsuarioId).HasColumnName("TipoUsuarioID");
-
-            entity.HasOne(d => d.HabilidadBlanda).WithMany(p => p.TestUsuarios)
-                .HasForeignKey(d => d.HabilidadBlandaId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__test_Usua__Habil__2C3393D0");
-
-            entity.HasOne(d => d.TipoIdentificacion).WithMany(p => p.TestUsuarios)
-                .HasForeignKey(d => d.TipoIdentificacionId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__test_Usua__TipoI__2B3F6F97");
-
-            entity.HasOne(d => d.TipoUsuario).WithMany(p => p.TestUsuarios)
-                .HasForeignKey(d => d.TipoUsuarioId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__test_Usua__TipoU__2A4B4B5E");
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("Telefono");
         });
 
         OnModelCreatingPartial(modelBuilder);

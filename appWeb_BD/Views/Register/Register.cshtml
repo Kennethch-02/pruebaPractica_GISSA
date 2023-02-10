@@ -1,0 +1,143 @@
+﻿@model TestUsuario
+@{
+    ViewBag.Title = "Registro de Usuario";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Views/Login/Login.cshtml.js"></script>
+    <script src="~/Views/Register/Register.cshtml.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/appWeb_BD.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/appWeb_BD.styles.css" asp-append-version="true" />
+</head>
+<div id="alertWarning" class="alert alert-success fade alertTop" role="alert">
+    
+</div>
+<div class="alert alert-warning fade alertTop" role="alert">
+    
+</div>
+<form method="post">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left"></div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <select class="form-select" aria-label="Default select example" asp-for="TipoUsuario">
+                                <option selected>Administrador</option>
+                                <option value="0">Consultor</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <select id="selectNacionality" class="form-select" aria-label="Default select example" asp-for="TipoIdentificacion">
+                                <option selected>Nacional</option>
+                                <option value="0">Extranjero</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="NumIdentificacion" class="text-danger"></span>
+                            <input id="identificacionId" asp-for="NumIdentificacion" class="form-control" placeholder="Numero de Identificacion" type="text" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+                            <input id="nombreId" asp-for="NombreCompleto" class="form-control" placeholder="Nombre Completo" type="text" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+                            <input id="nombreUsuarioId" asp-for="NombreUsuario" class="form-control" placeholder="Usuario" type="text" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="Clave" class="text-danger"></span>
+                            <input id="claveId" asp-for="Clave" class="form-control" placeholder="Contraseña" type="password" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
+                            <input id="emailID" asp-for="CorreoElectronico" class="form-control" placeholder="Correo Electronico" type="email" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input id="showNumberInput" class="form-control" placeholder="Telefono" type="text" />
+                            <input id="numbersInput" asp-for="Telefono" class="form-control" placeholder="" type="text" style="display:none" />
+                            <button id="addNumberButton" type="button" class="btn btn-success">+</button>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input id="habilitysInput" asp-for="HabilidadBlanda" class="form-control" placeholder="" type="text" style="display:none" />
+                            <!-- Botón -->
+                            <button id="mostrarHabilidades" type="button" class="btn btn-secondary" data-toggle="modal">
+                                Agregar Habilidades
+                            </button>
+
+                            <!-- Modal -->
+                            <div id="exampleModal" class="modal-dialog modalCustom" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLiveLabel">
+                                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Habilidades Blandas</font></font>
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Buena comunicación" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Buena comunicación
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Buena organización" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Buena organización
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Trabajo en equipo" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Trabajo en equipo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Puntualidad" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Puntualidad
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Ser creativo" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Ser creativo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input hability" type="checkbox" value="Facilidad de adaptación" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Facilidad de adaptación
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" id="ocultarHabilidades"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cerrar</font></font></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="col-md-6">
+                        <input id="verifyUsers" value="Verificar y Registrar" class="btn btn-primary" />
+                        <input id="registerUsers" type="submit" class="btn btn-primary" asp-action="Register" asp-controller="Register" style="display:none" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

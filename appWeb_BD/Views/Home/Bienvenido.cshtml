@@ -1,0 +1,26 @@
+﻿@model LoginUserModel
+@{
+    ViewBag.Title = "Bienvenido";
+    Layout = null;
+}
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - appWeb_BD</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/appWeb_BD.styles.css" asp-append-version="true" />
+</head>
+<div>
+    <h1>Bienvenido</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Cerrar Secion</a>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+    window.history.forward();
+</script>
